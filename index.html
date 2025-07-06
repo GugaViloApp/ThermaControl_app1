@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ThermaControl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>ThermaControl</h1>
+    <p>Insira os dados para calcular o índice de estresse térmico:</p>
+    <label>Temperatura (°C):</label>
+    <input type="number" id="temp" />
+    <label>Umidade Relativa (%):</label>
+    <input type="number" id="ur" />
+    <button onclick="calcularTHI()">Calcular THI</button>
+    <div id="resultado"></div>
+    <a href="conhecimento.html">🔬 Acesse a base científica</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

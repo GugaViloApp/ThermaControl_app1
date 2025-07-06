@@ -1,0 +1,10 @@
+
+{
+  "name": "ThermaControl",
+  "short_name": "ThermaControl",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "App para monitorar estresse térmico em fêmeas suínas.",
+  "icons": []
+}
