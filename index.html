@@ -1,23 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ThermaControl</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>ThermaControl</h1>
-    <p>Insira os dados para calcular o índice de estresse térmico:</p>
-    <label>Temperatura (°C):</label>
-    <input type="number" id="temp" />
-    <label>Umidade Relativa (%):</label>
-    <input type="number" id="ur" />
-    <button onclick="calcularTHI()">Calcular THI</button>
-    <div id="resultado"></div>
-    <a href="conhecimento.html">🔬 Acesse a base científica</a>
+    <header>
+      <h1>ThermaControl</h1>
+      <select id="categoria">
+        <option>Porcas</option>
+        <option>Suínos em engorda</option>
+        <option>Leitões de maternidade</option>
+        <option>Leitões de creche</option>
+        <option>Machos</option>
+      </select>
+    </header>
+    <main>
+      <section id="input-section">
+        <div class="location">
+          <span id="location">Localização</span><br />
+          <small id="coordinates">Lat: -, Long: -</small>
+        </div>
+        <label>Temperatura (°C):</label>
+        <input type="number" id="temp" step="0.1" />
+        <label>Umidade Relativa (%):</label>
+        <input type="number" id="ur" step="1" />
+        <button onclick="calcularTHI()">Calcular THI</button>
+      </section>
+
+      <section id="output-section">
+        <div class="velocimetro">
+          <canvas id="gauge" width="200" height="100"></canvas>
+        </div>
+        <div id="resultados">
+          <div><strong>Temp:</strong> <span id="valTemp">-</span> °C</div>
+          <div><strong>UR:</strong> <span id="valUR">-</span> %</div>
+          <div><strong>ITU:</strong> <span id="valITU">-</span></div>
+        </div>
+      </section>
+
+      <section id="previsoes">
+        <h2>Previsão para os próximos dias</h2>
+        <div id="forecast-container"></div>
+      </section>
+    </main>
+    <footer>
+      <a href="conhecimento.html">📚 Acesse a base científica</a>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
